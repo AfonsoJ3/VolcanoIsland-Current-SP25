@@ -7,17 +7,40 @@ public class Player : MonoBehaviour
     public int health;
     private float input;
     private Rigidbody2D rb;
+    private Animator anim;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         input=Input.GetAxisRaw("Horizontal");
+        if (input > 0 || input < 0)
+        {
+            anim.SetBool("isRunning",true);
+        }
+        if (input == 0)
+        {
+            anim.SetBool("isRunning",false);
+        }
+
+
+        if (input > 0)
+        {
+            //right
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+
+        if (input < 0)
+        {
+            //left
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        }
     }
 
     void FixedUpdate()

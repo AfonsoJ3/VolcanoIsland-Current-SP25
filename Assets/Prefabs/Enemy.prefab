@@ -48,6 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSpeed: 2
   maxSpeed: 5
+  damage: 1
+  hitEffect: {fileID: 1477925165229146927, guid: 710d2024ea86c405d85a02cfdcdb8b7c, type: 3}
 --- !u!58 &7648989099147384432
 CircleCollider2D:
   m_ObjectHideFlags: 0
