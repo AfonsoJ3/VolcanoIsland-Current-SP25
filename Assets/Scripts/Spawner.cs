@@ -17,6 +17,7 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (timer < 0)
         {
             //do the spawn
