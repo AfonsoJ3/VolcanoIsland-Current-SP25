@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        player.reset();
+        player.Reset();
         deathCanvas.SetActive(false);
         
     }
@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
 
     public void onResetClick()
     {
-        player.reset();
+        player.Reset();
     }
 
     public void onMenuClick()
